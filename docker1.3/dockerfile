@@ -1,0 +1,8 @@
+FROM ubuntu:20.04
+LABEL description = 'Demo de dockerfile con PHP'
+RUN apt update
+RUN apt upgrade -y
+ENV DEBIAN_FRONTEND noninteractive
+RUN apt install -y php7.4 
+RUN apt install -y sqlite3
+RUN apt install -y php7.4-sqlite3
